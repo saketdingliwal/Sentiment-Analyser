@@ -23,3 +23,9 @@ dev f measure=
 0.578948249116
 0.830993358176
 0.825072603664
+
+svm->
+train - > (10000) 2 summary, 2 adjectivs, cleaning -> 0.46
+train -> (10000) 2 summary, no adjectives, cleaning -> 0.36
+
+
