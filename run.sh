@@ -1,10 +1,1 @@
-if [[ $# -ne 2 ]]
-then
-echo "Enter Correct number of arguments"
-exit 1
-fi
-
-IFN=$1
-OFN=$2
-
-python3 output.py $IFN $OFN
+/home/cse/btech/cs1150254/anaconda2/bin/python /home/cse/btech/cs1150254/Desktop/assign2/code.py
