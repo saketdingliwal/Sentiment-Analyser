@@ -1,47 +1,14 @@
-Discussed the idea of adding adjective as features with Prakhar Ganesh(2015CS10245)
+Discussed some ideas with Prakhar Ganesh(2015CS10245), but none of them used in the final code
 Borrowed compile script from Suyash Agarwal
+discussed about batch sizes and faster running on gpu with Aman Agarwal (2015CS10210)
 
 
 URL for models and other support files ->
-https://owncloud.iitd.ac.in/owncloud/index.php/s/BRDF7BiQSLDTQMz/download
-https://owncloud.iitd.ac.in/owncloud/index.php/s/ecyS4tasGsssXx6/download
-
-
+DICT_URL="https://owncloud.iitd.ac.in/owncloud/index.php/s/tjcJtCiEoxg3q99/download"
+MODEL_URL="https://owncloud.iitd.ac.in/owncloud/index.php/s/cSp2XTc2aRT7EmL/download"
 
 
 Various methods were tried and tested on the dev set
-
-1. Naive Bayes simple ->
-confusion
-[[ 6735  1804   629]
- [ 2087  5968  2013]
- [ 4839 13608 72076]]
-macro f 0.613986821395
-
-2. Undersampling of data and LinearSVC:
-confusion
-[[ 549  200  101]
- [ 264  413  219]
- [1107 1904 5243]]
-macro f 0.465775294786
-
-3. Doubling the weights of adjectives after POS tagging:
-confusion
-[[3223 1160  617]
- [1527 2267 1206]
- [ 759 1194 3047]]
-macro f 0.567355445752
-
-4. Changing to C=1.2
-confusion
-[[ 6735  1804   629]
- [ 2087  5968  2013]
- [ 4839 13608 72076]]
-macro f 0.613986821395
-
-5. Using L1 norm, the f score decreased
-6. Use of Bigrams
-7. Use of class division of majority class
-8. Adding summary 3 times in the end
-
-finally, stop_word removal, negation following not, adding adjectives, using bigrams and other parameter adjustments were used.
+gensim doc2vec + SVM => .49
+heirarchy lstm (10000) examples ==> 0.47
+finally bidirectional LSTM used ==> 0.72
